@@ -1,4 +1,4 @@
-FROM huggingfacedg/sheets:dev
+FROM aisheets/sheets
 
 # Set data dir under persisted volume (if enabled)
 ENV DATA_DIR /data/sheets
