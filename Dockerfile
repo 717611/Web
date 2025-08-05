@@ -1,4 +1,4 @@
-FROM aisheets/sheets
+FROM aisheets/sheets:main
 
 # Set data dir under persisted volume (if enabled)
 ENV DATA_DIR /data/sheets
