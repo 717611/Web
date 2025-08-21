@@ -1,10 +1,10 @@
 FROM aisheets/sheets:dev
 
-# Set data dir under persisted volume (if enabled)
-ENV DATA_DIR /data/sheets
+# Set data dir for Vercel's ephemeral filesystem
+ENV DATA_DIR /tmp/sheets
 
-# Configure HF cache to the persisted volume
-ENV HF_HOME /data/hf_cache
+# Configure HF cache for Vercel's ephemeral filesystem
+ENV HF_HOME /tmp/hf_cache
 
 # Available environment variables
 #
@@ -14,5 +14,4 @@ ENV HF_HOME /data/hf_cache
 # Uncomment the next line if you want to change the number of concurrent requests when generating data
 # ENV NUM_CONCURRENT_REQUESTS=5
 
-# Grant write access to the node app
-RUN mkdir /data && chown -R node:node /data
+# The /tmp directory is used for data storage and should be writable by default.
