@@ -1,0 +1,12 @@
+{
+  "name": "ai-sheets",
+  "builds": [
+    {
+      "src": "Dockerfile",
+      "use": "@vercel/docker",
+      "config": {
+        "port": 3000
+      }
+    }
+  ]
+}
